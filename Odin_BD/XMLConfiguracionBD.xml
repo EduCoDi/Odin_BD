@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Conexion>
+  
+  <BaseDatos>
+    <descripcion>Cal</descripcion>
+    <servidor>svrdbcal\bd02</servidor>
+    <usuario>dbaccess</usuario>
+    <clave>dbaccesscal</clave>
+    <basedatosConexion>DbcMactAux</basedatosConexion>
+  </BaseDatos>
+
+  <BaseDatos>
+    <descripcion>Dev</descripcion>
+    <servidor>svrbddesi</servidor>
+    <usuario>dbaccess</usuario>
+    <clave>dbaccess</clave>
+    <basedatosConexion>DbcMactAux</basedatosConexion>
+  </BaseDatos>
+  
+
+  <BaseDatos>
+    <descripcion>DbS</descripcion>
+    <servidor>svrbddesi</servidor>
+    <usuario>royal</usuario>
+    <clave>royal</clave>
+    <basedatosConexion>Spring</basedatosConexion>
+  </BaseDatos>
+
+</Conexion>
+  

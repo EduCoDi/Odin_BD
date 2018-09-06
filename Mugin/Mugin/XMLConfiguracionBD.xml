@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Conexion>
+  <BaseDatos>
+    <servidor>svrdbcal\bd02</servidor>
+    <usuario>dbaccess</usuario>
+    <clave>dbaccesscal</clave>
+    <basedatosConexion>DbcMactAux</basedatosConexion>
+  </BaseDatos>  
+</Conexion>
+  

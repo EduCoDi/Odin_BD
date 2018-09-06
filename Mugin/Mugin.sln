@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mugin", "Mugin\Mugin.csproj", "{FA13FC84-035C-48D7-87E6-A249E354FCC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestOdin", "..\UniTestOdin\UnitTestOdin\UnitTestOdin.csproj", "{4DF28A6E-11DF-4BC4-9DFA-8E1755F24874}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA13FC84-035C-48D7-87E6-A249E354FCC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA13FC84-035C-48D7-87E6-A249E354FCC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA13FC84-035C-48D7-87E6-A249E354FCC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA13FC84-035C-48D7-87E6-A249E354FCC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DF28A6E-11DF-4BC4-9DFA-8E1755F24874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DF28A6E-11DF-4BC4-9DFA-8E1755F24874}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DF28A6E-11DF-4BC4-9DFA-8E1755F24874}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DF28A6E-11DF-4BC4-9DFA-8E1755F24874}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
