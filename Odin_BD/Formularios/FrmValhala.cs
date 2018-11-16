@@ -73,7 +73,8 @@ namespace Odin_BD
             }
         }
         private void btnCarga_Click(object sender, EventArgs e)
-        {         
+        {
+            bool marca;
                if( ValidaControlesFormulario()==true)
             { 
                 //ejecuta bck de varios procedimientos a la vez
@@ -87,28 +88,46 @@ namespace Odin_BD
                 for (int i = 0; i < cantidad; i++)
                 {
                     conexion.Conectar();
-                    ClsRuna runa = new ClsRuna();
-                    flag = conexion.Ejecuta(forja.Runas[i].Nombre, conexion.conexion, forja.Runas[i]);
-
-                    if (flag == true)
+                    if (conexion.estado == true)
                     {
-                        forja.GeneraProcedimiento(forja.Runas[i], txtRutaArchivoOrigen.Text, txtRutaArchivoDestino.Text);
-                        conexion.Desconectar();
+                        ClsRuna runa = new ClsRuna();
+                        flag = conexion.Ejecuta(forja.Runas[i].Nombre, conexion.conexion, forja.Runas[i]);
+
+                        if (flag == true)
+                        {
+                            forja.GeneraProcedimiento(forja.Runas[i], txtRutaArchivoOrigen.Text, txtRutaArchivoDestino.Text);
+                            conexion.Desconectar();
+                            marca = true;
+                        }
+                        else
+                        {
+                            //ClsForja runasNoExisten = new ClsForja();
+                            //conexion.Desconectar();
+                            // MessageBox.Show("No existe SP : " + forja.Runas[i].Nombre);
+                            marca = false;
+                            
+                        }
+
+                        if (conexion.estado == true)
+                        {
+                            conexion.Desconectar();
+                        }
+                        
                     }
                     else
                     {
-                        //ClsForja runasNoExisten = new ClsForja();
-                        //conexion.Desconectar();
-                        // MessageBox.Show("No existe SP : " + forja.Runas[i].Nombre);
+                        marca = false;
+                        MessageBox.Show("Problemas con la conexion - Terminado");
                     }
-                    if (conexion.estado == true)
-                        conexion.Desconectar();
+
+                    if (marca == true)
+                    {
+                        MessageBox.Show("Proceso Terminado", "Informe");
+                    }
 
                 }
 
-                MessageBox.Show("Proceso Terminado... verificar carperta de destino");
                 //los sp que no tienen backup no existen en la base \n  si no me crees checas el código");
-
             }//fin del ifValidaControlesFormulario            
         }
         private void FrmValhala_Load(object sender, EventArgs e)

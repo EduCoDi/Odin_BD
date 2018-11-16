@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Odin_BD", "Odin_BD\Odin_BD.csproj", "{46C6BA1D-01AE-4926-8BBC-F8F8E6E95943}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mugin", "Mugin\Mugin\Mugin.csproj", "{FA13FC84-035C-48D7-87E6-A249E354FCC8}"
@@ -62,5 +64,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44F09DCF-B4E4-43BF-97A3-F961C31B731B}
 	EndGlobalSection
 EndGlobal

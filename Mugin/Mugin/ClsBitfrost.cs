@@ -9,7 +9,7 @@ using System.Data.Common;
 using System.Data;
 using System.Xml;
 using Odin_BD;
-
+using System.Windows.Forms;
 
 namespace Mugin
 {
@@ -90,9 +90,18 @@ namespace Mugin
                 Console.WriteLine("Error Cadena");
             else
             {
-                conexion = new SqlConnection(cadenaConexion);
-                conexion.Open();
-                estado = true;
+                try
+                {
+                    conexion = new SqlConnection(cadenaConexion);
+                    conexion.Open();
+                    estado = true;
+                }
+                catch (Exception ex)
+                {
+                    estado = false;
+                    MessageBox.Show(" Error intentao abrir la conexion");
+                }
+                
             }
         }
 

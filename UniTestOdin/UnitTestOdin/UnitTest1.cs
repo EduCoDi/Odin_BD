@@ -19,6 +19,20 @@ namespace UnitTestOdin
             ClsBitfrost conexion = new ClsBitfrost();
             conexion.Conectar();
             Assert.IsTrue(conexion.estado);
+            conexion.Desconectar();
+        }
+
+        [TestMethod]
+        public void PruebaConexionFallaPorBD()
+        {
+            ClsBitfrost conexion = new ClsBitfrost();
+            conexion.Servidor = "xxxx";
+            conexion.BaseD = "DbcmacAux";
+            conexion.Usuario = "dbaccesscal";
+            conexion.Clave = "dbaccess";
+            conexion.ObtenerCadena();
+
+
         }
 
         [TestMethod]
