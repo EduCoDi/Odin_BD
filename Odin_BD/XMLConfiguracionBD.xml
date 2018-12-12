@@ -11,18 +11,18 @@
 
   <BaseDatos>
     <descripcion>Dev</descripcion>
-    <servidor>svrbddesi</servidor>
+    <servidor>svrdbcal</servidor>
     <usuario>dbaccess</usuario>
-    <clave>dbaccess</clave>
+    <clave>dbaccesscal</clave>
     <basedatosConexion>DbcMactAux</basedatosConexion>
   </BaseDatos>
   
 
   <BaseDatos>
     <descripcion>DbS</descripcion>
-    <servidor>svrbddesi</servidor>
-    <usuario>royal</usuario>
-    <clave>royal</clave>
+    <servidor>svrdbcal</servidor>
+    <usuario>dbaccess</usuario>
+    <clave>dbaccesscal</clave>
     <basedatosConexion>Spring</basedatosConexion>
   </BaseDatos>
 

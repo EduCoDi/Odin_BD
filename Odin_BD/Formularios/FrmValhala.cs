@@ -74,6 +74,7 @@ namespace Odin_BD
         }
         private void btnCarga_Click(object sender, EventArgs e)
         {
+            int conteoErrores = 0;
             bool marca;
                if( ValidaControlesFormulario()==true)
             { 
@@ -88,7 +89,7 @@ namespace Odin_BD
                 for (int i = 0; i < cantidad; i++)
                 {
                     conexion.Conectar();
-                    if (conexion.estado == true)
+                    if (conexion.estado == true) 
                     {
                         ClsRuna runa = new ClsRuna();
                         flag = conexion.Ejecuta(forja.Runas[i].Nombre, conexion.conexion, forja.Runas[i]);
@@ -117,16 +118,18 @@ namespace Odin_BD
                     else
                     {
                         marca = false;
-                        MessageBox.Show("Problemas con la conexion - Terminado");
+                        conexion.Desconectar();
+                        conteoErrores = conteoErrores + 1;
+                        //MessageBox.Show("Problemas con la conexion - Terminado");
                     }
 
-                    if (marca == true)
-                    {
-                        MessageBox.Show("Proceso Terminado", "Informe");
-                    }
+                    //if (marca == true)
+                    //{
+                    //    MessageBox.Show("Proceso Terminado", "Informe");
+                    //}
 
                 }
-
+                
                 //los sp que no tienen backup no existen en la base \n  si no me crees checas el código");
             }//fin del ifValidaControlesFormulario            
         }
