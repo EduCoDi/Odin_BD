@@ -51,7 +51,7 @@
             // 
             this.btnGeneracadenaConexion.Location = new System.Drawing.Point(25, 191);
             this.btnGeneracadenaConexion.Name = "btnGeneracadenaConexion";
-            this.btnGeneracadenaConexion.Size = new System.Drawing.Size(93, 37);
+            this.btnGeneracadenaConexion.Size = new System.Drawing.Size(93, 51);
             this.btnGeneracadenaConexion.TabIndex = 10;
             this.btnGeneracadenaConexion.Text = "Selección Cadena";
             this.btnGeneracadenaConexion.UseVisualStyleBackColor = true;
@@ -59,9 +59,9 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(219, 194);
+            this.btnLimpiar.Location = new System.Drawing.Point(215, 190);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(93, 37);
+            this.btnLimpiar.Size = new System.Drawing.Size(93, 52);
             this.btnLimpiar.TabIndex = 11;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
@@ -189,10 +189,11 @@
             // 
             this.btnRegistraCadena.Location = new System.Drawing.Point(123, 191);
             this.btnRegistraCadena.Name = "btnRegistraCadena";
-            this.btnRegistraCadena.Size = new System.Drawing.Size(86, 36);
+            this.btnRegistraCadena.Size = new System.Drawing.Size(86, 51);
             this.btnRegistraCadena.TabIndex = 14;
-            this.btnRegistraCadena.Text = "Registra Cadena en MSConfig";
+            this.btnRegistraCadena.Text = "Registra Cadena MSConfig";
             this.btnRegistraCadena.UseVisualStyleBackColor = true;
+            this.btnRegistraCadena.Click += new System.EventHandler(this.btnRegistraCadena_Click);
             // 
             // FrmHeimdal
             // 

@@ -22,12 +22,13 @@ namespace Odin_BD.Formularios
         public string usuarioBD;
         public string claveBD;
         public string servidorBD;
+
         //GUARDAR LAS CONEXIONES, FALTA INICIALIZAR DE ACUERDO AL NUMERO DE ITEMS EN EL ARCHIVO DE CONFIGURACIÓN
         public ClsBitfrost conexion = new ClsBitfrost();
         
         public int filasArrayConexiones=0;
         public bool flagFuncionalidad = false;
-        string[,] arrayConexiones;
+        string[,] arrayConexiones = new string[3, 5];
         // filasArrayConexiones=   conexion.AsignaMatriz();
 
         private void DefineArray()
@@ -56,12 +57,8 @@ namespace Odin_BD.Formularios
             txtServidor.Text = "svrdbcal\\bd02";
             txtBaseDatos.Text = "DbcMactAux";
             txtUsuario.Text = "dbaccess";
-            txtClaveBD.Text = "dbaccesscal";         
-
+            txtClaveBD.Text = "dbaccesscal";
             cargarConexionXML();
-
-            cmbDescribeConexion.SelectedIndex = 1;
-
         }
 
         public void cargarConexionXML()
@@ -100,6 +97,7 @@ namespace Odin_BD.Formularios
             txtClaveBD.Text = "";
             txtServidor.Text = "";
             txtUsuario.Text = "";
+
         }
 
         private void btnGeneracadenaConexion_Click(object sender, EventArgs e)
@@ -144,10 +142,6 @@ namespace Odin_BD.Formularios
             return nuevoValor;
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void cmbDescribeConexion_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -160,6 +154,7 @@ namespace Odin_BD.Formularios
              nclave[0].InnerText;      
              */
 
+
             try
             {
                 txtServidor.Text = arrayConexiones[index, 0];
@@ -171,19 +166,12 @@ namespace Odin_BD.Formularios
             {
                 MessageBox.Show("Verificar archivo de configuración", ex.Message);
                 throw;
-            }
-
-            
-            
-
-
+            }  
         }
 
+        private void btnRegistraCadena_Click(object sender, EventArgs e)
+        {
 
-
-        
-        
-
-
+        }
     }
 }

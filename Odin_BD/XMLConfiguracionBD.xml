@@ -23,7 +23,7 @@
     <servidor>svrdbcal</servidor>
     <usuario>dbaccess</usuario>
     <clave>dbaccesscal</clave>
-    <basedatosConexion>Spring</basedatosConexion>
+    <basedatosConexion>BD_CMCPLSAF</basedatosConexion>
   </BaseDatos>
 
 </Conexion>

@@ -18,8 +18,9 @@ namespace Odin_BD
 {
     public partial class FrmValhala : Form
     {
+
         public ClsBitfrost conexion = new ClsBitfrost();
-        string[,] arrayConexiones = new string[3, 5];
+        public string[,] arrayConexiones = new string[3, 5];
         bool flagValidaFormularios=false;
 
         public FrmValhala()
@@ -76,7 +77,7 @@ namespace Odin_BD
         {
             int conteoErrores = 0;
             bool marca;
-               if( ValidaControlesFormulario()==true)
+            if( ValidaControlesFormulario()==true)
             { 
                 //ejecuta bck de varios procedimientos a la vez
                 bool flag;
@@ -129,7 +130,7 @@ namespace Odin_BD
                     //}
 
                 }
-                
+                MessageBox.Show("Proceso Terminado");
                 //los sp que no tienen backup no existen en la base \n  si no me crees checas el código");
             }//fin del ifValidaControlesFormulario            
         }
@@ -139,9 +140,14 @@ namespace Odin_BD
             bf.ObtenerCadena();
             Text = string.Concat("Valhala           ", bf.descripcionCortaCadenaConexion);
             CargaBaseConexion();
+            
+           
         }
         private void CargaBaseConexion()
         {
+
+            //conexion.AsignaMatriz();
+            //arrayConexiones = new string[bf.NConexionesDocConfiguracion, 5];
             XmlDocument xDoc = new XmlDocument();
             xDoc.Load("..\\..\\XMLConfiguracionBD.xml");
 
@@ -232,6 +238,16 @@ namespace Odin_BD
         {
             FrmHeimdal FormularioHeimdal = new FrmHeimdal();
             FormularioHeimdal.Show();
+        }
+
+        private void archivoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRutaArchivoOrigen_TextChanged(object sender, EventArgs e)
+        {
+            txtRutaArchivoDestino.Text = txtRutaArchivoOrigen.Text.Replace("\\dev", "\\cal");
         }
     }
 }

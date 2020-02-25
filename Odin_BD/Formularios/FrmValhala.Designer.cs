@@ -115,6 +115,7 @@
             this.txtRutaArchivoOrigen.TabIndex = 8;
             this.txtRutaArchivoOrigen.Text = "D:\\Soft\\Odin.net\\Pruebas\\dev";
             this.txtRutaArchivoOrigen.UseSystemPasswordChar = true;
+            this.txtRutaArchivoOrigen.TextChanged += new System.EventHandler(this.txtRutaArchivoOrigen_TextChanged);
             // 
             // btnCarga
             // 
@@ -233,6 +234,7 @@
             this.archivoToolStripMenuItem1.Name = "archivoToolStripMenuItem1";
             this.archivoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.archivoToolStripMenuItem1.Text = "Archivo";
+            this.archivoToolStripMenuItem1.Click += new System.EventHandler(this.archivoToolStripMenuItem1_Click);
             // 
             // modificaBDToolStripMenuItem
             // 

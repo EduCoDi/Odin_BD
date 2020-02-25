@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace Odin_BD.Clases
 {
@@ -41,7 +42,25 @@ namespace Odin_BD.Clases
             get { return cadenaConexion; }
             set { cadenaConexion = value; }
         }
-        
+
+        [XmlRoot(ElementName="BaseDatos")]
+        public class ConfiguracionConexion {
+            [XmlAttribute(AttributeName= "descripcion")]
+            public string Descripcion { get; set; }
+            [XmlAttribute(AttributeName ="servidor")]
+            public string Servidor { get; set; }
+            [XmlAttribute(AttributeName="clave")]
+            public string Clave { get; set; }
+            [XmlAttribute(AttributeName ="basedatosConexion")]
+            public string BaseConexion { get; set; }
+        }
+
+        [XmlRoot(ElementName ="Conexion")]
+        public class ConfiguracionConexiones {
+            public List<ConfiguracionConexion> ConfiguracionConexion { get; set; }
+        }
+
+
 
 
     }

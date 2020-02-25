@@ -49,11 +49,14 @@ namespace Mugin
         private int nConexionesDocConfiguracion;
         public int NConexionesDocConfiguracion
         {
-            get { return nConexionesDocConfiguracion; }
+            get {
+                nConexionesDocConfiguracion = AsignaMatriz();
+                return nConexionesDocConfiguracion;
+            }
             set { nConexionesDocConfiguracion = value; }
         }
 
-
+        public string[,] arrayConexiones;
 
         public SqlConnection conexion;
         public string cadenaConexion = "";
@@ -175,9 +178,11 @@ namespace Mugin
             {
                 nConexionesDocConfiguracion = nConexionesDocConfiguracion + 1;
             }
-
+            
             return nConexionesDocConfiguracion;
+    
         }
+
         
     }
 }
