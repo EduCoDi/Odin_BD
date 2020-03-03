@@ -144,7 +144,7 @@ namespace Mugin
         {
             Runa.Nombre = Runa.QuitaExtensionSQL(Runa.Nombre);
             try
-            {
+            {   
                 SqlCommand cmd = new SqlCommand("sp_helptext " + Runa.Nombre, cn);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 adapter.Fill(Runa.RunaCuerpo);

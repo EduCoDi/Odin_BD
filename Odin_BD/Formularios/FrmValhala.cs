@@ -30,31 +30,41 @@ namespace Odin_BD
 
         private void btnEjecutar_Click(object sender, EventArgs e)
         {
-            bool flagEjecucion;
-            //EJECUTA LAS FUNCIONES DE LAS DISTINTAS CLASES
-            if (txtRutaArchivoOrigen.Text != "")
+            try
             {
-                ClsRuna runa = new ClsRuna();
-                ClsForja forja = new ClsForja();
-
-                ClsBitfrost conectar = new ClsBitfrost();
-                conectar.ObtenerCadena();
-                conectar.Conectar();
-                flagEjecucion = conectar.Ejecuta(txtProcedimientoABuscar.Text, conectar.conexion, runa);
-                if (flagEjecucion == true)
+                if (txtRutaArchivoOrigen.Text != "")
                 {
-                    forja.GeneraProcedimiento(runa, txtRutaArchivoOrigen.Text, txtRutaArchivoDestino.Text);
-                    MessageBox.Show("Culminado con exito: " + txtProcedimientoABuscar.Text);
+                    ClsRuna runa = new ClsRuna();
+                    ClsForja forja = new ClsForja();
+                    ClsBitfrost conectar = new ClsBitfrost();
+                    bool flagEjecucion;
+                    conectar.ObtenerCadena();
+                    conectar.Conectar();
+                    flagEjecucion = conectar.Ejecuta(txtProcedimientoABuscar.Text, conectar.conexion, runa);
+                    if (flagEjecucion == true)
+                    {
+                        forja.GeneraProcedimiento(runa, txtRutaArchivoOrigen.Text, txtRutaArchivoDestino.Text);
+                        MessageBox.Show("Culminado con exito: " + txtProcedimientoABuscar.Text);
+                    }
+                    else
+                        MessageBox.Show("No existe SP: " + txtProcedimientoABuscar.Text);
+                    //dtgProcedimiento.DataSource = conectar.datos; //PARA PRUEBAS       
                 }
                 else
-                    MessageBox.Show("No existe SP: " + txtProcedimientoABuscar.Text);
-                //dtgProcedimiento.DataSource = conectar.datos; //PARA PRUEBAS       
+                    MessageBox.Show("Ingresa un SP");
             }
-            else
-                MessageBox.Show("Ingresa un SP");
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            //EJECUTA LAS FUNCIONES DE LAS DISTINTAS CLASES
+           
         }
+
         private void btnRutaOrigen_Click(object sender, EventArgs e)
-        { 
+        {
+            txtRutaArchivoOrigen.Text = "";
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
                 // CAPTURA LA RUTA DONDE SE DESEA DESCARGAR LOS SP.                 
@@ -65,6 +75,7 @@ namespace Odin_BD
         }
         private void btnRutaDestino_Click(object sender, EventArgs e)
         {
+            txtRutaArchivoDestino.Text = "";
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
                 // CAPTURA LA RUTA DONDE SE DESEA DESCARGAR LOS SP.                 
