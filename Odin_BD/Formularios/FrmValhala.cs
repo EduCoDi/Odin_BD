@@ -164,10 +164,12 @@ namespace Odin_BD
 
             XmlNodeList conexion = xDoc.GetElementsByTagName("Conexion");
             XmlNodeList lista = ((XmlElement)conexion[0]).GetElementsByTagName("BaseDatos");
+            int contadorBDArchivo = lista.Count;
 
-            
+
             int contadorBase =0;
-
+            arrayConexiones = ClsEstatica.ResizeArray(arrayConexiones, contadorBDArchivo, 5, 0, 0);
+         
             foreach (XmlElement nodo in lista)
             {
                 XmlNodeList nservidor = nodo.GetElementsByTagName("servidor");
@@ -260,5 +262,7 @@ namespace Odin_BD
         {
             txtRutaArchivoDestino.Text = txtRutaArchivoOrigen.Text.Replace("\\dev", "\\cal");
         }
+
+      
     }
 }

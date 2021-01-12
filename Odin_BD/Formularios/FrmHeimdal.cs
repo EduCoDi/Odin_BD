@@ -171,7 +171,7 @@ namespace Odin_BD.Formularios
 
         private void btnRegistraCadena_Click(object sender, EventArgs e)
         {
-
+            //codigo actualización de xml
         }
     }
 }

@@ -106,7 +106,7 @@
             // 
             // txtRutaArchivoOrigen
             // 
-            this.txtRutaArchivoOrigen.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRutaArchivoOrigen.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRutaArchivoOrigen.HideSelection = false;
             this.txtRutaArchivoOrigen.Location = new System.Drawing.Point(95, 29);
             this.txtRutaArchivoOrigen.Multiline = true;
@@ -228,6 +228,7 @@
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
             this.archivoToolStripMenuItem.Text = "Configuración";
+            this.archivoToolStripMenuItem.Click += new System.EventHandler(this.archivoToolStripMenuItem_Click);
             // 
             // archivoToolStripMenuItem1
             // 
