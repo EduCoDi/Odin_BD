@@ -9,6 +9,14 @@
     <basedatosConexion>DbcMactAux</basedatosConexion>
   </BaseDatos>
   
+    <BaseDatos>
+    <descripcion>Consolidada</descripcion>
+    <servidor>CCPWINCBDP01</servidor>
+    <usuario>dbaccess</usuario>
+    <clave>dbaccesscal</clave>
+    <basedatosConexion>DbcMactConsolidada</basedatosConexion>
+  </BaseDatos>
+  
   <BaseDatos>
     <descripcion>Cal_Ant</descripcion>
     <servidor>svrdbcal\bd02</servidor>
@@ -18,11 +26,11 @@
   </BaseDatos>
 
   <BaseDatos>
-    <descripcion>Dev</descripcion>
-    <servidor>svrdbcal</servidor>
-    <usuario>dbaccess</usuario>
-    <clave>dbaccesscal</clave>
-    <basedatosConexion>DbcMactAux</basedatosConexion>
+    <descripcion>Sprig</descripcion>
+    <servidor>CCPWINCBDP01</servidor>
+    <usuario>royal</usuario>
+    <clave>royal</clave>
+    <basedatosConexion>Spring</basedatosConexion>
   </BaseDatos>
   
 
